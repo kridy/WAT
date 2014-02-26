@@ -30,6 +30,10 @@ namespace SingeltonApp
         {
             get { return processes; }
         }
+
+        public string CurrentProcessName {
+            get { return ProcessUtil.GetCurrentProcessName(); }
+        }
     }
 
     public class ApplicationService : IDisposable

@@ -19,7 +19,9 @@ namespace SingeltonApp
         {
             var manager = new ApplicationService(this, e );       
      
-            manager.TryStart(a => new MainWindow().Show());
+            manager.TryStart(
+                a => new MainWindow().Show(),
+                b => b.Processes.First().Focus());           
         }
     }
 }

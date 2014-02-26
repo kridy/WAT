@@ -47,26 +47,5 @@ namespace SingeltonApp
 
             User32.FlashWindowEx(ref info);
         }
-
-        
-
-        
-
-
-        ///// <summary>
-        ///// Flash the spacified Window (Form) until it recieves focus.
-        ///// </summary>
-        ///// <param name="form">The Form (Window) to Flash.</param>
-        ///// <returns></returns>
-        //public static bool Flash(System.Windows.Forms.Form form)
-        //{
-        //    // Make sure we're running under Windows 2000 or later
-        //    if (Win2000OrLater)
-        //    {
-        //        FLASHWINFO fi = Create_FLASHWINFO(form.Handle, FLASHW_ALL | FLASHW_TIMERNOFG, uint.MaxValue, 0);
-        //        return FlashWindowEx(ref fi);
-        //    }
-        //    return false;
-        //}
     }
 }
