@@ -55,7 +55,7 @@
     </ApplicationDefinition>
     <Compile Include="ProcessUtil.cs" />
     <Compile Include="ApplicationService.cs" />
-    <Compile Include="Win32.cs" />
+    <Compile Include="User32.cs" />
     <Compile Include="WindowService.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

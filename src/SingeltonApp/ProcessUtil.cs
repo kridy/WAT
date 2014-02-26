@@ -35,17 +35,17 @@ namespace SingeltonApp
 
         public static void Focus(this Process process)
         {
-            SetForegroundWindow(process.MainWindowHandle);
+            User32.SetForegroundWindow(process.MainWindowHandle);
             //FlashWindow(process.MainWindowHandle, true);
 
             var info = new User32.FLASHWINFO();
             info.cbSize = Convert.ToUInt32(Marshal.SizeOf(info));
             info.hwnd = process.MainWindowHandle;
-            info.dwFlags = FLASHW_ALL;
+            info.dwFlags = User32.FLASHW_ALL;
             info.dwTimeout = 0;
             info.uCount = 4;
 
-            FlashWindowEx(ref info);
+            User32.FlashWindowEx(ref info);
         }
 
         
