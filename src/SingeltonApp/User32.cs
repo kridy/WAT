@@ -2,12 +2,14 @@
 using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Interop;
-using Microsoft.Win32.SafeHandles;
 
 namespace SingeltonApp
 {
     internal static class User32
     {
+        [DllImport("user32")]
+        public static extern IntPtr GetDC(IntPtr hwnd);
+
         [DllImport("user32.dll")]
         [return: MarshalAs(UnmanagedType.Bool)]
         public static extern bool SetForegroundWindow(IntPtr hWnd);
